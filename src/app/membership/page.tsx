@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Check, Star, Zap, Briefcase } from 'lucide-react';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { PayPalSubscribeButton } from '@/components/ecommerce/PayPalSubscribeButton';
 
 const homeFeatures = [
@@ -140,30 +141,38 @@ export default function MembershipPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <MembershipCard
-              title="Home AI Concierge"
-              Icon={Zap}
-              accent="#06B6D4"
-              monthlyPrice="$99"
-              annualPrice="$999"
-              savingsText="Save ~16%"
-              monthlyPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_HOME_MONTHLY || 'placeholder'}
-              annualPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_HOME_ANNUAL || 'placeholder'}
-              features={homeFeatures}
-            />
-            <MembershipCard
-              title="Business AI Concierge"
-              Icon={Briefcase}
-              accent="#8B5CF6"
-              monthlyPrice="$499"
-              annualPrice="$3,999"
-              savingsText="Save ~33%"
-              monthlyPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_BUSINESS_MONTHLY || 'placeholder'}
-              annualPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_BUSINESS_ANNUAL || 'placeholder'}
-              features={businessFeatures}
-            />
-          </div>
+          <PayPalScriptProvider
+            options={{
+              clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ?? 'placeholder',
+              vault: true,
+              intent: 'subscription',
+            }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <MembershipCard
+                title="Home AI Concierge"
+                Icon={Zap}
+                accent="#06B6D4"
+                monthlyPrice="$99"
+                annualPrice="$999"
+                savingsText="Save ~16%"
+                monthlyPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_HOME_MONTHLY || 'placeholder'}
+                annualPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_HOME_ANNUAL || 'placeholder'}
+                features={homeFeatures}
+              />
+              <MembershipCard
+                title="Business AI Concierge"
+                Icon={Briefcase}
+                accent="#8B5CF6"
+                monthlyPrice="$499"
+                annualPrice="$3,999"
+                savingsText="Save ~33%"
+                monthlyPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_BUSINESS_MONTHLY || 'placeholder'}
+                annualPlanId={process.env.NEXT_PUBLIC_PAYPAL_PLAN_BUSINESS_ANNUAL || 'placeholder'}
+                features={businessFeatures}
+              />
+            </div>
+          </PayPalScriptProvider>
         </div>
       </section>
 

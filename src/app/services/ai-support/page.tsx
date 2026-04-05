@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 export const metadata: Metadata = {
   title: 'AI Support & Maintenance Plans | First Choice Cyber',
   description:
-    'Monthly AI support plans for homes and businesses. Priority response, ongoing optimization, and dedicated support. From $29/month.',
+    'One-time AI support sessions for homes and businesses. Troubleshooting, optimization, and reconfiguration. Home from $129, Business from $249.',
 };
 
 export default function AISupportPage() {

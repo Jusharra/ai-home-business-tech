@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { Check, Star, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { CTASection } from '@/components/sections/CTASection';
+import { ServicePackageCards } from '@/components/booking/ServicePackageCards';
 import { Service } from '@/types';
 
 interface ServicePageTemplateProps {
@@ -75,37 +75,25 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <p className="text-sm font-semibold text-[#06B6D4] uppercase tracking-wider mb-3">Pricing</p>
             <h2 className="text-3xl font-bold text-[#0F172A]">Choose Your Package</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {service.packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`relative flex flex-col bg-white border-2 rounded-2xl p-6 h-full ${
-                  pkg.isPopular ? 'border-[#06B6D4] shadow-xl shadow-cyan-500/10' : 'border-slate-200'
-                }`}
-              >
-                {pkg.isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-[#06B6D4] text-white px-3 py-1 flex items-center gap-1">
-                      <Star className="w-3 h-3 fill-white" /> Most Popular
-                    </Badge>
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-[#0F172A] mb-1">{pkg.name}</h3>
-                <p className="text-2xl font-extrabold text-[#0F172A] mb-2">{pkg.price}</p>
-                <p className="text-sm text-[#64748B] mb-4">{pkg.description}</p>
-                <ul className="space-y-2 mb-6 flex-1">
-                  {pkg.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-[#64748B]">
-                      <Check className="w-4 h-4 text-[#06B6D4] flex-shrink-0 mt-0.5" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className={`w-full font-semibold ${pkg.isPopular ? 'bg-[#06B6D4] hover:bg-[#0891B2] text-white' : 'bg-[#0F172A] hover:bg-[#1e293b] text-white'}`}>
-                  <Link href="/contact">{pkg.cta}</Link>
-                </Button>
-              </div>
-            ))}
+          <ServicePackageCards service={service} />
+        </div>
+      </section>
+
+      {/* Membership CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-wide">
+          <div className="bg-[#0F172A] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-[#06B6D4] font-semibold text-sm mb-1">AI Concierge Membership</p>
+              <h3 className="text-2xl font-bold text-white mb-2">Want Ongoing AI Support?</h3>
+              <p className="text-slate-400 max-w-lg">
+                Join our Home or Business AI Concierge membership for priority support, ongoing
+                optimization, and exclusive member pricing — billed monthly or annually.
+              </p>
+            </div>
+            <Button asChild className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold flex-shrink-0 px-8">
+              <Link href="/membership">View Membership Plans</Link>
+            </Button>
           </div>
         </div>
       </section>

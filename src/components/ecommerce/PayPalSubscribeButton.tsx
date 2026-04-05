@@ -1,6 +1,6 @@
 'use client';
 
-import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 import { useState } from 'react';
 import { CheckCircle2, AlertCircle } from 'lucide-react';
 
@@ -9,12 +9,10 @@ interface PayPalSubscribeButtonProps {
   planName: string;
 }
 
+// Note: This component must be rendered inside a <PayPalScriptProvider vault intent="subscription">
 export function PayPalSubscribeButton({ planId, planName }: PayPalSubscribeButtonProps) {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
-  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ?? '';
-  if (!clientId) return null;
 
   if (status === 'success') {
     return (
@@ -38,28 +36,21 @@ export function PayPalSubscribeButton({ planId, planName }: PayPalSubscribeButto
   }
 
   return (
-    <PayPalScriptProvider
-      options={{
-        clientId,
-        vault: true,
-        intent: 'subscription',
+    <PayPalButtons
+      key={planId}
+      style={{ layout: 'vertical', shape: 'rect', color: 'blue' }}
+      createSubscription={(_data, actions) => {
+        return actions.subscription.create({ plan_id: planId });
       }}
-    >
-      <PayPalButtons
-        style={{ layout: 'vertical', shape: 'rect', color: 'blue' }}
-        createSubscription={(_data, actions) => {
-          return actions.subscription.create({ plan_id: planId });
-        }}
-        onApprove={(data) => {
-          setStatus('success');
-          setMessage(`Subscription ${data.subscriptionID} is active. Check your email for details.`);
-          return Promise.resolve();
-        }}
-        onError={() => {
-          setStatus('error');
-          setMessage('Subscription could not be set up. Please try again or contact support.');
-        }}
-      />
-    </PayPalScriptProvider>
+      onApprove={(data) => {
+        setStatus('success');
+        setMessage(`Subscription ${data.subscriptionID} is active. Check your email for details.`);
+        return Promise.resolve();
+      }}
+      onError={() => {
+        setStatus('error');
+        setMessage('Subscription could not be set up. Please try again or contact support.');
+      }}
+    />
   );
 }
