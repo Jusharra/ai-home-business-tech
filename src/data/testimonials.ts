@@ -1,0 +1,58 @@
+import { Testimonial } from '@/types';
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    quote: "I was drowning in emails and missing follow-ups with potential clients. First Choice Cyber set up an AI system in one afternoon that now handles my entire inbox workflow. I've gained back about 2 hours every single day.",
+    name: 'Marcus R.',
+    title: 'Real Estate Agent',
+    location: 'Brentwood, LA',
+    rating: 5,
+    service: 'Business AI',
+  },
+  {
+    id: '2',
+    quote: "As a single mom running a household and a business, I felt like I was always behind. The team set up AI automation for my calendar, school reminders, and daily tasks. It sounds small but it's changed everything.",
+    name: 'Jennifer K.',
+    title: 'Interior Designer & Mom of 3',
+    location: 'Pacific Palisades, LA',
+    rating: 5,
+    service: 'Home AI Setup',
+  },
+  {
+    id: '3',
+    quote: "Our medical practice was losing patients to competitors because we were slow to respond to inquiries. After the business AI setup, we now respond in minutes automatically. New patient bookings are up 40%.",
+    name: 'Dr. David Chen',
+    title: 'Medical Practice Owner',
+    location: 'Bakersfield, CA',
+    rating: 5,
+    service: 'Business AI',
+  },
+  {
+    id: '4',
+    quote: "I'm 67 and honestly terrified of technology. But the trainer was so patient and made everything so simple. I'm now using AI to help me with my retirement planning, writing letters, and even video calling my grandkids more effectively.",
+    name: 'Barbara M.',
+    title: 'Retired Teacher',
+    location: 'Beverly Hills, LA',
+    rating: 5,
+    service: 'AI Training',
+  },
+  {
+    id: '5',
+    quote: "We're a small HVAC company and used to lose jobs because we couldn't follow up with leads fast enough. The lead automation system they built is incredible. It's like having a full-time admin without the cost.",
+    name: 'Tony Vasquez',
+    title: 'Owner, Vasquez HVAC',
+    location: 'Bakersfield, CA',
+    rating: 5,
+    service: 'Business AI',
+  },
+  {
+    id: '6',
+    quote: "The Concierge support plan has been worth every penny. Whenever something needs updating or I want to add a new workflow, they just handle it. It's like having an IT person on retainer.",
+    name: 'Lisa Thompson',
+    title: 'Financial Advisor',
+    location: 'Santa Monica, LA',
+    rating: 5,
+    service: 'AI Support',
+  },
+];
