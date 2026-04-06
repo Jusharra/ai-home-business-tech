@@ -45,8 +45,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl"
           >
-            We set up, train, and support AI systems that handle your busywork—so you can focus
-            on what matters. White-glove, in-person service for homes and businesses.
+            We set up, train, and support AI systems that handle your busywork so you can focus
+            on what matters. White glove, in-person service for homes and businesses.
           </motion.p>
 
           <motion.div
@@ -69,7 +69,7 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 hover:border-white/40 text-base px-8 py-6"
+              className="border-white/20 text-black hover:bg-white/10 hover:border-white/40 text-base px-8 py-6"
             >
               <Link href="/how-it-works">See How It Works</Link>
             </Button>
