@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/data/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Home AI Setup | First Choice Cyber | Los Angeles',
+  title: 'Home AI Setup | First-Choice Cyber | Los Angeles',
   description:
     'In-person AI setup for your home. We come to you, install AI assistants and automations, train your family, and provide ongoing support. Serving LA & Central Valley.',
 };

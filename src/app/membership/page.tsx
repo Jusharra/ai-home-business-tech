@@ -125,7 +125,7 @@ export default function MembershipPage() {
             Your Dedicated AI Partner
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Ongoing support, priority access, and expert optimization — for your home or business.
+            Ongoing support, priority access, and expert optimization for your home or business.
             Cancel anytime.
           </p>
         </div>
@@ -137,7 +137,7 @@ export default function MembershipPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0F172A]">Choose Your Membership</h2>
             <p className="text-[#64748B] mt-2">
-              Home or business — ongoing AI concierge support tailored to you.
+              Home or business ongoing AI concierge support tailored to you.
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function MembershipPage() {
               },
               {
                 q: 'How is support delivered?',
-                a: 'Via email, phone, or text — whichever you prefer. We respond same-day for all concierge members.',
+                a: 'Via email, phone, or text whichever you prefer. We respond same-day for all concierge members.',
               },
               {
                 q: 'Can I switch between Home and Business?',

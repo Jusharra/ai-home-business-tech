@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug(slug);
   if (!product) return {};
   return {
-    title: `${product.title} | First Choice Cyber`,
+    title: `${product.title} | First-Choice Cyber`,
     description: product.shortDescription,
   };
 }
@@ -108,7 +108,7 @@ export default async function ProductPage({ params }: Props) {
               {/* Purchase */}
               {product.isAffiliate ? (
                 <div>
-                  <p className="text-xs text-[#64748B] mb-3">This is an affiliate product. Clicking Buy Now will open the retailer&apos;s site.</p>
+                  <p className="text-xs text-[#64748B] mb-3">This may be an affiliate product. Clicking Buy Now will open the retailer&apos;s site.</p>
                   <Button asChild className="w-full bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold py-6 text-base">
                     <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer">
                       Buy Now

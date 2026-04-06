@@ -34,7 +34,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="font-bold text-lg">First Choice Cyber</span>
+              <span className="font-bold text-lg">First-Choice Cyber</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               Personal IT for AI. We deploy, train, and support AI systems for homes and businesses.
@@ -120,7 +120,7 @@ export function Footer() {
         <Separator className="my-8 bg-white/10" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} First Choice Cyber. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} First-Choice Cyber. All rights reserved.</p>
           <p>Serving Los Angeles &amp; Central Valley, CA</p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { generalFaqs } from '@/data/faqs';
 import { CTASection } from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: 'FAQ | First Choice Cyber',
+  title: 'FAQ | First-Choice Cyber',
   description:
     'Answers to common questions about our AI setup, training, and support services. Get clarity before you book.',
 };

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { products } from '@/data/products';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://firstchoicecyber.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-personal-it-support.netlify.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

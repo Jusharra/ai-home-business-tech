@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | First Choice Cyber',
+  title: 'Terms of Service | First-Choice Cyber',
   description: 'Terms of service for First Choice Cyber — the rules and policies governing use of our services.',
 };
 

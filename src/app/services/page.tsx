@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { CTASection } from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: 'AI Services for Home & Business | First Choice Cyber',
+  title: 'AI Services for Home & Business | First-Choice Cyber',
   description:
     'From home AI setup to full business automation—white-glove, in-person AI deployment for Los Angeles and the Central Valley.',
 };

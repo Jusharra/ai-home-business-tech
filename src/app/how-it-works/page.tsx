@@ -3,7 +3,7 @@ import { CTASection } from '@/components/sections/CTASection';
 import { CalendarCheck, Users, Wrench, BookOpen, Smile, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How It Works | First Choice Cyber',
+  title: 'How It Works | First-Choice Cyber',
   description:
     'See exactly how our AI setup process works—from free consultation to deployment, training, and ongoing support. No tech expertise required.',
 };

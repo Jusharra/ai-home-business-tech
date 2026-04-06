@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | First Choice Cyber',
-  description: 'Privacy policy for First Choice Cyber — how we collect, use, and protect your information.',
+  title: 'Privacy Policy | First-Choice Cyber',
+  description: 'Privacy policy for First-Choice Cyber — how we collect, use, and protect your information.',
 };
 
 export default function PrivacyPage() {

@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/data/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Business AI Automation | First Choice Cyber | Los Angeles',
+  title: 'Business AI Automation | First-Choice Cyber | Los Angeles',
   description:
     'Custom AI workflows for your business. Email automation, lead follow-up, scheduling, and more. In-person setup in Los Angeles and the Central Valley.',
 };

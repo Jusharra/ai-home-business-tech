@@ -3,7 +3,7 @@ import { QuoteForm } from '@/components/forms/QuoteForm';
 import { Clock, FileText, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Get a Custom Quote | First Choice Cyber',
+  title: 'Get a Custom Quote | First-Choice Cyber',
   description:
     'Request a custom quote for AI setup, training, or support. Tell us what you need and we\'ll respond within 24 hours with a tailored proposal.',
 };

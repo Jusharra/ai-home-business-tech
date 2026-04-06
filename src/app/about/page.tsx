@@ -3,9 +3,9 @@ import { CTASection } from '@/components/sections/CTASection';
 import { CheckCircle2, X, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | First Choice Cyber',
+  title: 'About Us | First-Choice Cyber',
   description:
-    'Learn about First Choice Cyber—why we started, what makes us different, and how we help families and businesses in Los Angeles and the Central Valley with AI.',
+    'Learn about First-Choice Cyber and why we started, what makes us different, and how we help families and businesses in Los Angeles and the Central Valley with AI.',
 };
 
 const differentiators = [
@@ -76,15 +76,15 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-wide max-w-3xl">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Why First Choice Cyber Exists</h2>
+            <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Why First Choice-Cyber Exists</h2>
             <p className="text-[#64748B] leading-relaxed mb-4">
-              We kept seeing the same thing: incredible AI tools that could genuinely transform people&apos;s lives and businesses—but nobody to help them actually use those tools. Thousands of dollars of AI software sitting unused because setup was confusing. Business owners losing leads while their AI software sat unconfigured. Families with smart home devices that barely worked.
+              We kept seeing the same thing: incredible AI tools that could genuinely transform people&apos;s lives and businesses but nobody to help them actually use those tools. Thousands of dollars of AI software sitting unused because setup was confusing. Business owners losing leads while their AI software sat unconfigured. Families with smart home devices that barely worked.
             </p>
             <p className="text-[#64748B] leading-relaxed mb-4">
               The gap wasn&apos;t the technology. It was the human layer. The person who shows up, figures out what YOU need, sets it up the right way, and makes sure you can actually use it.
             </p>
             <p className="text-[#64748B] leading-relaxed">
-              That&apos;s First Choice Cyber. We&apos;re the white-glove AI deployment team for homes and businesses in Los Angeles and the Central Valley. We come to you. We set up AI systems customized for your life. We train you. We support you. And we&apos;re here for the long haul.
+              That&apos;s First-Choice Cyber. We&apos;re the white-glove AI deployment team for homes and businesses in Los Angeles and the Central Valley. We come to you. We set up AI systems customized for your life. We train you. We support you. And we&apos;re here for the long haul.
             </p>
           </div>
         </div>

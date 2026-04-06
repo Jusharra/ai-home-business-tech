@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'AI Setup & Support for Home & Business | First Choice Cyber | Los Angeles',
-    template: '%s | First Choice Cyber',
+    default: 'AI Setup & Support for Home & Business | First-Choice Cyber | Los Angeles',
+    template: '%s | First-Choice Cyber',
   },
   description:
     'Personal IT for AI. We set up, train, and support AI systems for busy families and businesses in LA and the Central Valley. Book your free consultation today.',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://firstchoicecyber.com',
-    siteName: 'First Choice Cyber',
-    title: 'AI Setup & Support for Home & Business | First Choice Cyber',
+    url: 'https://ai-personal-it-support.netlify.app',
+    siteName: 'First-Choice Cyber',
+    title: 'AI Setup & Support for Home & Business | First-Choice Cyber',
     description: 'Personal IT for AI. We deploy AI systems that work for you.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'First Choice Cyber | Personal IT for AI',
+    title: 'First-Choice Cyber | Personal IT for AI',
     description: 'We set up, train, and support AI systems for homes and businesses in LA.',
   },
   robots: {

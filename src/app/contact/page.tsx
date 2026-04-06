@@ -4,9 +4,9 @@ import { ContactForm } from '@/components/forms/ContactForm';
 import { CalEmbed } from '@/components/CalEmbed';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | First Choice Cyber',
+  title: 'Contact Us | First-Choice Cyber',
   description:
-    'Get in touch with First Choice Cyber. Book a free consultation, send a message, or call us. Serving Los Angeles and the Central Valley.',
+    'Get in touch with First-Choice Cyber. Book a free consultation, send a message, or call us. Serving Los Angeles and the Central Valley.',
 };
 
 export default function ContactPage() {

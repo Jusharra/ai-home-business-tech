@@ -61,7 +61,7 @@ export default function ProductsPage() {
       {/* Affiliate disclosure */}
       <div className="container-wide pb-8 px-4 md:px-8">
         <p className="text-xs text-[#64748B] text-center">
-          Some products contain affiliate links. As an Amazon Associate and affiliate partner, we may earn commissions from qualifying purchases at no extra cost to you.
+          Some products contain affiliate links. As an affiliate partner, we may earn commissions from qualifying purchases at no extra cost to you.
         </p>
       </div>
     </>

@@ -356,7 +356,7 @@ export function BookingModal({
                     <option value="">Select…</option>
                     <option value="Beginner (never used AI)">Beginner (never used AI)</option>
                     <option value="Some experience (used ChatGPT etc.)">
-                      Some experience (used ChatGPT etc.)
+                      Some experience (used ChatGPT, Claude, etc.)
                     </option>
                     <option value="Intermediate (regular AI user)">
                       Intermediate (regular AI user)
