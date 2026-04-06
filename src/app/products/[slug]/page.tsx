@@ -132,6 +132,24 @@ export default async function ProductPage({ params }: Props) {
             </div>
           </div>
 
+          {/* YouTube video */}
+          {product.youtubeId && (
+            <div className="mt-16 pt-10 border-t border-slate-200">
+              <h2 className="text-2xl font-bold text-[#0F172A] mb-2">See It in Action</h2>
+              <p className="text-[#64748B] text-sm mb-6">Watch a quick overview before you buy.</p>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src={`https://www.youtube.com/embed/${product.youtubeId}`}
+                  title={`${product.title} — overview video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          )}
+
           {/* What's included */}
           {product.whatsIncluded && (
             <div className="mt-16 pt-10 border-t border-slate-200">

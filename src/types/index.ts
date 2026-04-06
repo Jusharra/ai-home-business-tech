@@ -41,6 +41,10 @@ export interface Product {
   rating?: number;
   reviewCount?: number;
   relatedProducts?: string[];
+  /** Path under /public/downloads/ — sent to buyer via email after payment */
+  downloadUrl?: string;
+  /** YouTube video ID (e.g. "dQw4w9WgXcQ") — shown on product detail page */
+  youtubeId?: string;
 }
 
 export type ProductCategory =

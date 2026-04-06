@@ -12,6 +12,7 @@ export const products: Product[] = [
     originalPrice: 79,
     category: 'templates',
     image: '/images/products/make-bundle.jpg',
+    downloadUrl: '/downloads/make-automation-bundle/make-automation-bundle.zip',
     badge: 'Bestseller',
     features: [
       '10 complete automation templates',
@@ -45,6 +46,7 @@ export const products: Product[] = [
     originalPrice: 49,
     category: 'templates',
     image: '/images/products/notion-workspace.jpg',
+    downloadUrl: '/downloads/notion-ai-workspace/notion-ai-workspace.zip',
     badge: 'New',
     features: [
       'Complete business management system',
@@ -75,6 +77,7 @@ export const products: Product[] = [
     originalPrice: 34,
     category: 'guides',
     image: '/images/products/prompting-guide.jpg',
+    downloadUrl: '/downloads/master-ai-prompting/master-ai-prompting-guide.pdf',
     badge: 'Bestseller',
     features: [
       '80-page comprehensive PDF guide',
@@ -102,6 +105,7 @@ export const products: Product[] = [
     price: 24,
     category: 'guides',
     image: '/images/products/business-guide.jpg',
+    downloadUrl: '/downloads/ai-for-business-guide/ai-for-business-guide.pdf',
     features: [
       'Step-by-step implementation roadmap',
       'ROI calculator included',
@@ -130,6 +134,7 @@ export const products: Product[] = [
     originalPrice: 24,
     category: 'prompts',
     image: '/images/products/email-prompts.jpg',
+    downloadUrl: '/downloads/business-email-prompts/business-email-prompt-pack.pdf',
     badge: 'New',
     features: [
       '50+ ready-to-use prompts',
@@ -160,6 +165,7 @@ export const products: Product[] = [
     originalPrice: 59,
     category: 'prompts',
     image: '/images/products/content-bundle.jpg',
+    downloadUrl: '/downloads/content-creation-bundle/content-creation-bundle.zip',
     badge: 'Bundle & Save',
     features: [
       '100+ content creation prompts',

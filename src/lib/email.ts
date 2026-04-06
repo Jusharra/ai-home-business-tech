@@ -208,6 +208,52 @@ export async function sendBookingCustomerConfirmation(data: {
   });
 }
 
+export async function sendDigitalDeliveryEmail(data: {
+  buyerEmail: string;
+  buyerName: string;
+  productTitle: string;
+  downloadUrl: string;
+}) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://firstchoicecyber.com';
+  const fullDownloadUrl = `${siteUrl}${data.downloadUrl}`;
+
+  await getSgMail().send({
+    from: FROM_EMAIL,
+    to: data.buyerEmail,
+    subject: `Your download is ready — ${data.productTitle}`,
+    html: `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #0F172A;">
+        <div style="background: #0F172A; padding: 28px 32px; border-radius: 12px 12px 0 0; text-align: center;">
+          <h1 style="color: #06B6D4; font-size: 22px; margin: 0;">First Choice Cyber</h1>
+          <p style="color: #94A3B8; margin: 4px 0 0; font-size: 14px;">Your purchase is confirmed</p>
+        </div>
+        <div style="background: #F8FAFC; padding: 32px; border-radius: 0 0 12px 12px; border: 1px solid #E2E8F0; border-top: none;">
+          <p style="font-size: 16px; margin: 0 0 8px;">Hi ${data.buyerName},</p>
+          <p style="color: #475569; margin: 0 0 24px;">Thank you for your purchase! Your digital product is ready to download.</p>
+
+          <div style="background: white; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px; margin-bottom: 24px;">
+            <p style="font-size: 13px; color: #64748B; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.05em;">Product</p>
+            <p style="font-size: 18px; font-weight: 700; margin: 0 0 20px;">${data.productTitle}</p>
+            <a href="${fullDownloadUrl}"
+               style="display: inline-block; background: #06B6D4; color: white; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
+              Download Your Files
+            </a>
+          </div>
+
+          <p style="font-size: 13px; color: #94A3B8; margin: 0 0 4px;">Download link:</p>
+          <p style="font-size: 13px; color: #64748B; word-break: break-all; margin: 0 0 24px;">${fullDownloadUrl}</p>
+
+          <p style="font-size: 13px; color: #64748B; margin: 0;">
+            Questions? Reply to this email or contact us at
+            <a href="mailto:1stchoicecyber@gmail.com" style="color: #06B6D4;">1stchoicecyber@gmail.com</a>
+          </p>
+          <p style="font-size: 13px; color: #94A3B8; margin: 8px 0 0;">— The First Choice Cyber Team</p>
+        </div>
+      </div>
+    `,
+  });
+}
+
 export async function sendNewsletterConfirmation(email: string) {
   await getSgMail().send({
     from: FROM_EMAIL,

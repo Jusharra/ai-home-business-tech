@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { captureOrder } from '@/lib/paypal';
+import { sendDigitalDeliveryEmail } from '@/lib/email';
+import { getProductBySlug } from '@/data/products';
 
 export async function POST(request: NextRequest) {
   try {
-    const { orderId, productSlug, buyerEmail } = await request.json();
+    const { orderId, productSlug } = await request.json();
 
     if (!orderId) {
       return NextResponse.json({ error: 'Missing orderId' }, { status: 400 });
@@ -12,11 +14,26 @@ export async function POST(request: NextRequest) {
     const capture = await captureOrder(orderId);
 
     if (capture.status === 'COMPLETED') {
-      // In production: generate download token, send email with download link
-      // For now, return success with a placeholder download URL
+      const product = productSlug ? getProductBySlug(productSlug) : null;
+
+      // Send digital delivery email if product has a download file
+      if (product?.downloadUrl) {
+        const buyerEmail: string = capture.payer?.email_address ?? '';
+        const firstName: string = capture.payer?.name?.given_name ?? 'there';
+
+        if (buyerEmail) {
+          await sendDigitalDeliveryEmail({
+            buyerEmail,
+            buyerName: firstName,
+            productTitle: product.title,
+            downloadUrl: product.downloadUrl,
+          });
+        }
+      }
+
       return NextResponse.json({
         success: true,
-        downloadUrl: `/api/download/placeholder-token`,
+        downloadUrl: product?.downloadUrl ?? null,
         productSlug,
       });
     }
