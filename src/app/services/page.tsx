@@ -17,7 +17,7 @@ const homeServices = [
     title: 'Home AI Setup',
     description:
       'AI assistants, smart home integration, email and calendar automation, and hands-on training for your household.',
-    price: 'From $149',
+    price: 'From $249',
     href: '/services/home-ai-setup',
   },
 ];
@@ -25,10 +25,10 @@ const homeServices = [
 const businessServices = [
   {
     icon: Building2,
-    title: 'Business AI',
+    title: 'Business AI Setup',
     description:
       'Lead follow-up, email management, scheduling automation, and custom workflow systems for your business.',
-    price: 'From $299',
+    price: 'From $500',
     href: '/services/business-ai',
   },
   {
@@ -36,7 +36,7 @@ const businessServices = [
     title: 'AI Training',
     description:
       'Hands-on, personalized training so you and your team can actually use AI effectively.',
-    price: 'From $79',
+    price: 'From $149',
     href: '/services/ai-training',
   },
   {
@@ -44,16 +44,16 @@ const businessServices = [
     title: 'AI Support',
     description:
       'Monthly maintenance plans that keep your AI systems optimized, updated, and performing.',
-    price: 'From $29/mo',
+    price: 'From $129/mo',
     href: '/services/ai-support',
   },
 ];
 
 const allServices = [
-  { icon: Home, title: 'Home AI Setup', description: 'AI for your household', price: 'From $149', href: '/services/home-ai-setup', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
-  { icon: Building2, title: 'Business AI', description: 'AI for your business', price: 'From $299', href: '/services/business-ai', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
-  { icon: GraduationCap, title: 'AI Training', description: 'Learn AI hands-on', price: 'From $79', href: '/services/ai-training', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
-  { icon: Headphones, title: 'AI Support', description: 'Ongoing maintenance', price: 'From $29/mo', href: '/services/ai-support', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
+  { icon: Home, title: 'Home AI Setup', description: 'AI for your household', price: 'From $249', href: '/services/home-ai-setup', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
+  { icon: Building2, title: 'Business AI Setup', description: 'AI for your business', price: 'From $500', href: '/services/business-ai', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
+  { icon: GraduationCap, title: 'AI Training', description: 'Learn AI hands-on', price: 'From $149', href: '/services/ai-training', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
+  { icon: Headphones, title: 'AI Support', description: 'Ongoing maintenance', price: 'From $129/mo', href: '/services/ai-support', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
 ];
 
 export default function ServicesPage() {
@@ -69,7 +69,7 @@ export default function ServicesPage() {
             AI Services for Home &amp; Business
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            From simple setup to full AI transformation—we meet you where you are.
+            From simple setup to full AI transformation, we meet you where you are.
           </p>
         </div>
       </section>
