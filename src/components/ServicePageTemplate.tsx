@@ -26,7 +26,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
               <Button asChild size="lg" className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-6 text-base shadow-xl shadow-cyan-500/20">
                 <Link href="/contact">Get Started <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/20 text-white hover:bg-[#0891B2] px-8 py-6 text-base">
+              <Button asChild size="lg" className="border-white/20 text-white hover:bg-[#0891B2] px-8 py-6 text-base">
                 <Link href="/quote">Request a Quote</Link>
               </Button>
             </div>
