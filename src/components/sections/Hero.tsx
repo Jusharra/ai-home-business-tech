@@ -69,7 +69,7 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-black hover:bg-white/10 hover:border-white/40 text-base px-8 py-6"
+              className="border-white/20 text-black shadow-cyan-500/25 hover:border-white/40 text-base px-8 py-6"
             >
               <Link href="/how-it-works">See How It Works</Link>
             </Button>
