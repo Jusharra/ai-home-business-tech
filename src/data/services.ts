@@ -6,7 +6,7 @@ export const services: Service[] = [
     slug: 'home-ai-setup',
     title: 'Home AI Setup',
     shortDescription: 'AI assistants, automation, and smart integrations for your household.',
-    fullDescription: 'Transform your home into a smart, AI-powered household. We come to your home, set up AI assistants, automate your daily tasks, and integrate all your smart devices—so your home works for you.',
+    fullDescription: 'Transform your home into a smart, AI-powered household. We come to your home, set up AI assistants, automate your daily tasks, and integrate all your smart devices so your home works for you.',
     icon: 'Home',
     startingPrice: 'From $249',
     targetAudience: 'home',
@@ -78,7 +78,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: 'What devices do you work with?',
-        answer: 'We work with all major smart home platforms including Amazon Alexa, Google Home, Apple HomeKit, and standalone AI tools. We\'ll recommend the best setup for your household.',
+        answer: 'We work with all major smart home platforms including Amazon Alexa, Google Home, Apple HomeKit, and standalone AI tools like OpenClaw, Cluade Desktop and more. We\'ll recommend the best setup for your household.',
       },
       {
         question: 'Do I need to be tech-savvy?',
@@ -103,7 +103,7 @@ export const services: Service[] = [
     slug: 'business-ai',
     title: 'Business AI',
     shortDescription: 'Email automation, lead follow-up, scheduling, and workflow systems.',
-    fullDescription: 'Stop losing leads and drowning in manual work. We deploy custom AI workflow systems that handle your email, follow up on leads, manage scheduling, and automate repetitive tasks—so you can focus on growing your business.',
+    fullDescription: 'Stop losing leads and drowning in manual work. We deploy custom AI workflow systems that handle your email, follow up on leads, manage scheduling, and automate repetitive tasks so you can focus on growing your business.',
     icon: 'Building2',
     startingPrice: 'From $500',
     targetAudience: 'business',
@@ -187,7 +187,7 @@ export const services: Service[] = [
     slug: 'ai-training',
     title: 'AI Training',
     shortDescription: 'Learn to use AI effectively with hands-on, personalized training.',
-    fullDescription: 'Whether you\'re a complete beginner or want to master advanced AI tools, our personalized training sessions will have you using AI confidently and effectively. No jargon, no confusion—just practical skills you can use right away.',
+    fullDescription: 'Whether you\'re a complete beginner or want to master advanced AI tools, our personalized training sessions will have you using AI confidently and effectively. No jargon, no confusion, just practical skills you can use right away.',
     icon: 'GraduationCap',
     startingPrice: 'From $149',
     targetAudience: 'both',
@@ -195,7 +195,7 @@ export const services: Service[] = [
       'Learn at your own pace with personalized instruction',
       'Practical skills you can apply immediately',
       'Master the tools you actually use',
-      'Build confidence with AI—no jargon',
+      'Build confidence with AI, no jargon',
       'Group options for teams and families',
       'Follow-up Q&A support included',
     ],
@@ -248,11 +248,11 @@ export const services: Service[] = [
       },
       {
         question: 'What AI tools will I learn?',
-        answer: 'We focus on the tools most relevant to your goals—typically ChatGPT, Claude, and automation platforms like Make.com or Zapier. We customize based on your specific needs.',
+        answer: 'We focus on the tools most relevant to your goals typically ChatGPT, Claude, and automation platforms like Make.com or Zapier. We customize based on your specific needs.',
       },
       {
         question: 'How is this different from watching YouTube videos?',
-        answer: 'Our training is personalized to your exact situation, tools, and goals. You\'re not watching generic content—you\'re learning what applies to your life or business, with a real expert guiding you.',
+        answer: 'Our training is personalized to your exact situation, tools, and goals. You\'re not watching generic content you\'re learning what applies to your life or business, with a real expert guiding you.',
       },
     ],
   },

@@ -10,7 +10,7 @@ const steps = [
     number: '01',
     icon: CalendarCheck,
     title: 'Book a Free Consultation',
-    description: "We'll discuss your needs and show you what's possible—no obligation, no tech jargon.",
+    description: "We'll discuss your needs and show you what's possible with no obligation, no tech jargon.",
   },
   {
     number: '02',

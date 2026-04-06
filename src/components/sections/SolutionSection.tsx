@@ -14,7 +14,7 @@ const valueProps = [
   {
     icon: Briefcase,
     title: 'Custom AI Systems',
-    description: 'Built for YOUR life or business—not a generic template that may or may not fit.',
+    description: 'Built for YOUR life or business, not a generic template that may or may not fit.',
   },
   {
     icon: GraduationCap,
@@ -24,7 +24,7 @@ const valueProps = [
   {
     icon: Headphones,
     title: 'Ongoing Support',
-    description: "We're here when you need us. Updates, questions, tweaks—covered.",
+    description: "We're here when you need us. Updates, questions, tweaks covered.",
   },
 ];
 

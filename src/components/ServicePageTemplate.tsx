@@ -88,7 +88,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
               <h3 className="text-2xl font-bold text-white mb-2">Want Ongoing AI Support?</h3>
               <p className="text-slate-400 max-w-lg">
                 Join our Home or Business AI Concierge membership for priority support, ongoing
-                optimization, and exclusive member pricing — billed monthly or annually.
+                optimization, and exclusive member pricing billed monthly or annually.
               </p>
             </div>
             <Button asChild className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold flex-shrink-0 px-8">

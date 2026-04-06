@@ -3,7 +3,7 @@ import { Testimonial } from '@/types';
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    quote: "I was drowning in emails and missing follow-ups with potential clients. First Choice Cyber set up an AI system in one afternoon that now handles my entire inbox workflow. I've gained back about 2 hours every single day.",
+    quote: "I was drowning in emails and missing follow-ups with potential clients. First-Choice Cyber set up an AI system in one afternoon that now handles my entire inbox workflow. I've gained back about 2 hours every single day.",
     name: 'Marcus R.',
     title: 'Real Estate Agent',
     location: 'Brentwood, LA',
