@@ -16,7 +16,7 @@ const serviceLinks = [
     description: 'AI assistants and automation for your household',
   },
   {
-    label: 'Business AI',
+    label: 'Business AI Setup',
     href: '/services/business-ai',
     description: 'Email, leads, scheduling, and workflow automation',
   },
@@ -76,7 +76,7 @@ export function Header() {
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="font-bold text-white text-lg hidden sm:block">
-                First Choice Cyber
+                First-Choice Cyber
               </span>
             </Link>
 
