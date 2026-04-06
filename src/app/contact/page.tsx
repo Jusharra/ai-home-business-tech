@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Phone, Mail, MapPin, Clock, Video } from 'lucide-react';
+import { Phone, Mail, MapPin, Video } from 'lucide-react';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { CalEmbed } from '@/components/CalEmbed';
 
@@ -36,17 +36,17 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#0F172A] text-sm">Call or Text</p>
-                    <p className="text-[#06B6D4] text-sm">(555) 000-0000</p>
+                    <p className="text-[#06B6D4] text-sm">(310) 894-6290</p>
                     <p className="text-xs text-[#64748B]">Mon–Fri, 9am–6pm PT</p>
                   </div>
                 </a>
-                <a href="mailto:hello@firstchoicecyber.com" className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-5 hover:border-[#06B6D4] transition-colors">
+                <a href="mailto:1stchoicecyber@gmail.com" className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-5 hover:border-[#06B6D4] transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-[#06B6D4]/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-[#06B6D4]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#0F172A] text-sm">Email Us</p>
-                    <p className="text-[#06B6D4] text-sm">hello@firstchoicecyber.com</p>
+                    <p className="text-[#06B6D4] text-sm">1stchoicecyber@gmail.com</p>
                     <p className="text-xs text-[#64748B]">Reply within 24 hours</p>
                   </div>
                 </a>

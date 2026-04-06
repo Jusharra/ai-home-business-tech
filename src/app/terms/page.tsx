@@ -50,7 +50,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-xl font-bold text-[#0F172A]">8. Contact</h2>
-            <p>For questions about these terms: hello@firstchoicecyber.com</p>
+            <p>For questions about these terms: 1stchoicecyber@gmail.com</p>
           </section>
         </div>
       </div>

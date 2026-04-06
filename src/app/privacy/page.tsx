@@ -40,12 +40,12 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-bold text-[#0F172A]">6. Your Rights</h2>
-            <p>You may request to access, correct, or delete your personal information by contacting us at hello@firstchoicecyber.com. We will respond within 30 days.</p>
+            <p>You may request to access, correct, or delete your personal information by contacting us at 1stchoicecyber@gmail.com. We will respond within 30 days.</p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-[#0F172A]">7. Contact</h2>
-            <p>For privacy-related questions, contact us at: hello@firstchoicecyber.com</p>
+            <p>For privacy-related questions, contact us at: 1stchoicecyber@gmail.com</p>
           </section>
         </div>
       </div>

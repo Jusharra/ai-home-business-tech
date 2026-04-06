@@ -52,7 +52,7 @@ export default function QuotePage() {
 
               <div className="bg-[#0F172A] rounded-2xl p-6">
                 <p className="text-[#06B6D4] font-semibold text-sm mb-2">Prefer to talk first?</p>
-                <p className="text-white font-bold text-lg mb-1">(555) 000-0000</p>
+                <p className="text-white font-bold text-lg mb-1">(310) 894-6290</p>
                 <p className="text-slate-400 text-sm">Mon–Fri, 9am–6pm PT</p>
               </div>
             </div>

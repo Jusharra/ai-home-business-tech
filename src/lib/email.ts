@@ -6,7 +6,7 @@ function getSgMail() {
 }
 
 const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@firstchoicecyber.com';
-const OWNER_EMAIL = process.env.OWNER_EMAIL || 'hello@firstchoicecyber.com';
+const OWNER_EMAIL = process.env.OWNER_EMAIL || '1stchoicecyber@gmail.com';
 
 export async function sendContactNotification(data: {
   name: string;

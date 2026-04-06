@@ -60,9 +60,9 @@ export function CTASection({
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-base"
             >
-              <a href="tel:+15550000000">
+              <a href="tel:+13108946290">
                 <Phone className="mr-2 w-5 h-5" />
-                (555) 000-0000
+                (310) 894-6290
               </a>
             </Button>
           </div>

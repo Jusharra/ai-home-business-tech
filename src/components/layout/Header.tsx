@@ -145,11 +145,11 @@ export function Header() {
             <div className="flex items-center gap-2">
               {/* Phone — desktop only */}
               <a
-                href="tel:+15550000000"
+                href="tel:+13108946290"
                 className="hidden xl:flex items-center gap-1.5 text-slate-400 hover:text-white text-sm transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>(555) 000-0000</span>
+                <span>(310) 894-6290</span>
               </a>
 
               {/* Cart */}
@@ -225,11 +225,11 @@ export function Header() {
                 <Link href="/contact">Book Free Consultation</Link>
               </Button>
               <a
-                href="tel:+15550000000"
+                href="tel:+13108946290"
                 className="flex items-center justify-center gap-2 w-full py-2 text-sm text-slate-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                (555) 000-0000
+                (310) 894-6290
               </a>
             </div>
           </div>
