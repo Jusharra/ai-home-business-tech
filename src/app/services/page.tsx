@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Home, Building2, GraduationCap, Headphones, ArrowRight } from 'lucide-react';
+import { Home, Building2, GraduationCap, Headphones, MapPin, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CTASection } from '@/components/sections/CTASection';
@@ -54,6 +54,7 @@ const allServices = [
   { icon: Building2, title: 'Business AI Setup', description: 'AI for your business', price: 'From $500', href: '/services/business-ai', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
   { icon: GraduationCap, title: 'AI Training', description: 'Learn AI hands-on', price: 'From $149', href: '/services/ai-training', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
   { icon: Headphones, title: 'AI Support', description: 'Ongoing maintenance', price: 'From $129/mo', href: '/services/ai-support', color: 'text-[#8B5CF6]', bg: 'bg-[#8B5CF6]/10' },
+  { icon: MapPin, title: 'Google My Business Optimization', description: 'Rank higher on Google Maps + AI search', price: 'From $500', href: '/services/google-my-business', color: 'text-[#06B6D4]', bg: 'bg-[#06B6D4]/10' },
 ];
 
 export default function ServicesPage() {

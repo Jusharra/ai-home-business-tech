@@ -327,6 +327,85 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    id: 'google-my-business',
+    slug: 'google-my-business',
+    title: 'Google My Business Optimization',
+    shortDescription: 'Dominate local search and Google Maps with AI-powered GMB optimization, review automation, and smart post scheduling.',
+    fullDescription: 'Most local businesses are invisible on Google Maps — even when they have great reviews. We use AI to fully optimize your Google Business Profile, build a review generation system, automate weekly posts, and position your business at the top of local AI and map searches. Whether someone is asking ChatGPT or Google for the best business near them, we make sure you show up.',
+    icon: 'MapPin',
+    startingPrice: 'From $500',
+    targetAudience: 'business',
+    benefits: [
+      'Free GMB audit report — see exactly where you rank and what\'s costing you customers',
+      'AI-optimized Google Business Profile (keywords, categories, services, photos)',
+      'Google Maps ranking improvement through structured data and AI search signals',
+      'Review generation strategy + automated follow-up system',
+      'Weekly AI-generated Google Posts to keep your profile active',
+      'AI search optimization so you appear in ChatGPT and Gemini local results',
+    ],
+    packages: [
+      {
+        name: 'GMB Optimization',
+        price: '$500',
+        description: 'One-time full optimization of your Google Business Profile.',
+        features: [
+          'Free GMB audit and competitor analysis',
+          'Full profile optimization (categories, keywords, services, description)',
+          'Google Maps AI ranking improvements',
+          'Photo and media optimization guidance',
+          'Review response templates',
+          'AI search visibility setup',
+          '30-day follow-up support',
+        ],
+        cta: 'Get Started',
+      },
+      {
+        name: 'GMB Management',
+        price: '$350/mo',
+        description: 'Ongoing monthly management to keep you ranking and growing.',
+        features: [
+          'Everything in GMB Optimization',
+          'Weekly AI-generated Google Posts',
+          'Review monitoring and response management',
+          'Automated review request system',
+          'Monthly ranking and performance report',
+          'Profile updates as your business changes',
+          'Priority AI search optimization updates',
+        ],
+        isPopular: true,
+        cta: 'Get Started',
+      },
+    ],
+    useCases: [
+      'Restaurants and service businesses losing customers to competitors on Google Maps',
+      'Local professionals (lawyers, dentists, contractors) not showing up in local search',
+      'Businesses with few or no Google reviews hurting their credibility',
+      'Any business that wants to appear when customers ask AI assistants for local recommendations',
+    ],
+    faqs: [
+      {
+        question: 'What is a free GMB report?',
+        answer: 'Before we do any work, we run a full audit of your Google Business Profile — showing you your current ranking, what competitors are doing, and exactly what\'s costing you customers. It\'s free, no commitment required.',
+      },
+      {
+        question: 'How long until I see results on Google Maps?',
+        answer: 'Most clients see measurable improvement in local rankings within 30–60 days. The speed depends on your competition and how optimized your profile currently is.',
+      },
+      {
+        question: 'What does AI search optimization mean?',
+        answer: 'When people ask ChatGPT, Google\'s AI Overviews, or Gemini for local business recommendations, the results are pulled from structured data and trusted profiles. We optimize your business to appear in those results — not just traditional search.',
+      },
+      {
+        question: 'Do I need to have a Google Business Profile already?',
+        answer: 'No. If you don\'t have one, we\'ll set it up and verify it for you as part of the service.',
+      },
+      {
+        question: 'What\'s included in the review automation system?',
+        answer: 'We set up a follow-up sequence that automatically requests reviews from your customers via email or text after a service. Reviews go directly to Google, building your reputation on autopilot.',
+      },
+    ],
+  },
 ];
 
 export const getServiceBySlug = (slug: string): Service | undefined =>

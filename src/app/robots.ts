@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-personal-it-support.netlify.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://first-choicecyber.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {
