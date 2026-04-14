@@ -47,7 +47,7 @@ export function ServicePackageCards({ service }: { service: Service }) {
 
             <h3 className="text-lg font-bold text-[#0F172A] mb-1">{pkg.name}</h3>
             <p className="text-2xl font-extrabold text-[#0F172A] mb-1">{pkg.price}</p>
-            <p className="text-xs text-slate-400 mb-4">one-time</p>
+            {!service.bookingOnly && <p className="text-xs text-slate-400 mb-4">one-time</p>}
             <p className="text-sm text-[#64748B] mb-4">{pkg.description}</p>
 
             <ul className="space-y-2 mb-6 flex-1">
@@ -86,6 +86,7 @@ export function ServicePackageCards({ service }: { service: Service }) {
           packageName={selected.name}
           packagePrice={selected.price}
           packagePriceNumeric={selected.priceNumeric}
+          bookingOnly={service.bookingOnly}
           onClose={() => setSelected(null)}
         />
       )}

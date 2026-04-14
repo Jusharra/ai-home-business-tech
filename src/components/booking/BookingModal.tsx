@@ -1,10 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useRouter } from 'next/navigation';
-import { X, Loader2 } from 'lucide-react';
+import { X, Loader2, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // ─── Schemas ──────────────────────────────────────────────────────────────────
@@ -45,6 +46,14 @@ const schemas = {
     address: z.string().optional(),
     issueDescription: z.string().min(10, 'Please describe what needs support'),
   }),
+  'google-my-business': z.object({
+    ...base,
+    businessName: z.string().min(1, 'Business name is required'),
+    businessAddress: z.string().min(5, 'Business address is required'),
+    websiteUrl: z.string().optional(),
+    hasGmbProfile: z.string().min(1, 'Please select an option'),
+    mainChallenge: z.string().min(10, 'Please describe your main challenge'),
+  }),
 } as const;
 
 type ServiceSlug = keyof typeof schemas;
@@ -61,6 +70,10 @@ type BookingFormData = {
   devices?: string;
   householdSize?: string;
   businessName?: string;
+  businessAddress?: string;
+  websiteUrl?: string;
+  hasGmbProfile?: string;
+  mainChallenge?: string;
   industry?: string;
   employeeCount?: string;
   automationGoal?: string;
@@ -115,6 +128,7 @@ export interface BookingModalProps {
   packageName: string;
   packagePrice: string;
   packagePriceNumeric: number;
+  bookingOnly?: boolean;
   onClose: () => void;
 }
 
@@ -126,9 +140,11 @@ export function BookingModal({
   packageName,
   packagePrice,
   packagePriceNumeric,
+  bookingOnly = false,
   onClose,
 }: BookingModalProps) {
   const router = useRouter();
+  const [submitted, setSubmitted] = useState(false);
   const slug = (serviceSlug in schemas ? serviceSlug : 'home-ai-setup') as ServiceSlug;
   const schema = schemas[slug];
 
@@ -141,7 +157,22 @@ export function BookingModal({
     resolver: zodResolver(schema) as any,
   });
 
-  const onSubmit = (data: BookingFormData) => {
+  const onSubmit = async (data: BookingFormData) => {
+    if (bookingOnly) {
+      await fetch('/api/booking/confirm', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceTitle,
+          packageName,
+          packagePrice,
+          paypalOrderId: 'N/A — Booking inquiry',
+          booking: data,
+        }),
+      });
+      setSubmitted(true);
+      return;
+    }
     const checkoutData = {
       serviceSlug,
       serviceTitle,
@@ -168,6 +199,21 @@ export function BookingModal({
 
       {/* Panel */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[92vh] flex flex-col">
+
+        {/* Success screen (bookingOnly) */}
+        {submitted ? (
+          <div className="flex flex-col items-center justify-center p-10 text-center gap-4">
+            <CheckCircle2 className="w-14 h-14 text-[#06B6D4]" />
+            <h2 className="text-2xl font-bold text-[#0F172A]">Request Received!</h2>
+            <p className="text-[#64748B]">
+              We&apos;ll review your details and reach out within 1 business day to discuss your Google My Business strategy.
+            </p>
+            <Button onClick={onClose} className="mt-2 bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8">
+              Close
+            </Button>
+          </div>
+        ) : (
+        <>
         {/* Header */}
         <div className="flex items-start justify-between p-6 border-b border-slate-100 flex-shrink-0">
           <div>
@@ -175,7 +221,9 @@ export function BookingModal({
               {serviceTitle}
             </p>
             <h2 className="text-xl font-bold text-[#0F172A]">{packageName}</h2>
-            <p className="text-[#8B5CF6] font-bold text-lg">{packagePrice}</p>
+            {packagePrice !== 'Custom' && (
+              <p className="text-[#8B5CF6] font-bold text-lg">{packagePrice}</p>
+            )}
           </div>
           <button
             onClick={onClose}
@@ -393,6 +441,63 @@ export function BookingModal({
               </Field>
             )}
 
+            {/* ── Google My Business specific ── */}
+            {slug === 'google-my-business' && (
+              <>
+                <Field
+                  label="Business Name"
+                  error={(errors as Record<string, { message?: string }>).businessName?.message}
+                >
+                  <input
+                    {...register('businessName')}
+                    className={inputCls}
+                    placeholder="Acme Plumbing Co."
+                  />
+                </Field>
+                <Field
+                  label="Business Address"
+                  error={(errors as Record<string, { message?: string }>).businessAddress?.message}
+                >
+                  <input
+                    {...register('businessAddress')}
+                    className={inputCls}
+                    placeholder="123 Main St, Los Angeles, CA 90001"
+                  />
+                </Field>
+                <Field label="Website URL" required={false} error={undefined}>
+                  <input
+                    {...register('websiteUrl')}
+                    type="url"
+                    className={inputCls}
+                    placeholder="https://yourbusiness.com"
+                  />
+                </Field>
+                <Field
+                  label="Do you currently have a Google Business Profile?"
+                  error={(errors as Record<string, { message?: string }>).hasGmbProfile?.message}
+                >
+                  <select {...register('hasGmbProfile')} className={selectCls}>
+                    <option value="">Select…</option>
+                    <option value="Yes, active">Yes, it&apos;s active</option>
+                    <option value="Yes, but not optimized">Yes, but it&apos;s not optimized</option>
+                    <option value="No, I need one created">No, I need one created</option>
+                    <option value="Not sure">Not sure</option>
+                  </select>
+                </Field>
+                <Field
+                  label="What is your main challenge with local search?"
+                  error={(errors as Record<string, { message?: string }>).mainChallenge?.message}
+                >
+                  <textarea
+                    {...register('mainChallenge')}
+                    className={inputCls}
+                    rows={3}
+                    placeholder="e.g. We don't show up on Google Maps, we have very few reviews, competitors rank above us…"
+                  />
+                </Field>
+              </>
+            )}
+
             {/* Notes */}
             <Field label="Additional Notes" required={false} error={undefined}>
               <textarea
@@ -418,14 +523,20 @@ export function BookingModal({
                 <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                 Processing…
               </>
+            ) : bookingOnly ? (
+              'Request Consultation'
             ) : (
               `Continue to Checkout — ${packagePrice}`
             )}
           </Button>
           <p className="text-center text-xs text-slate-400 mt-3">
-            You&apos;ll review your order and pay securely via PayPal on the next page.
+            {bookingOnly
+              ? "We'll review your details and reach out within 1 business day."
+              : "You'll review your order and pay securely via PayPal on the next page."}
           </p>
         </div>
+        </>
+        )}
       </div>
     </div>
   );

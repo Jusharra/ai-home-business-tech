@@ -12,6 +12,14 @@ export interface Service {
   useCases: string[];
   faqs: FAQ[];
   targetAudience: 'home' | 'business' | 'both';
+  /** If true, booking form submits directly as a lead (no PayPal checkout) */
+  bookingOnly?: boolean;
+  /** Checklist of deliverables shown in the "What's Included" section */
+  whatsIncluded?: string[];
+  /** Value stack table rows shown after pricing */
+  valueStack?: { item: string; value: string }[];
+  /** Guarantee statement shown before pricing */
+  guarantee?: string;
 }
 
 export interface ServicePackage {

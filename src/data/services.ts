@@ -153,11 +153,32 @@ export const services: Service[] = [
       },
     ],
     useCases: [
-      'Real estate agents losing leads because follow-up is too slow',
-      'Healthcare practices drowning in appointment scheduling',
-      'Contractors who spend hours on emails instead of on-site work',
-      'Professional services firms with manual onboarding processes',
-      'Retail businesses that need better customer communication',
+      'Business owners tired of juggling tasks AI could handle',
+      'Teams losing hours to email, scheduling, and follow-up',
+      'Companies ready to work smarter, not harder',
+      'Leaders who want AI running — without becoming AI experts',
+    ],
+    whatsIncluded: [
+      'Claude Desktop + Dispatch installation (desktop & mobile voice access)',
+      'OpenClaw or NemoClaw deployment (hardware/software setup)',
+      'Custom AI projects built around YOUR workflows',
+      'Skills configuration tailored to your business operations',
+      'Integration with your existing business tools',
+      '30-day optimization period (we tune it as you use it)',
+      'Hands-on training for 1–2 team members',
+      'Quick-start command guide (print + digital)',
+      '60-day priority support',
+    ],
+    guarantee: 'Your AI suite will be fully operational and your team trained within 30 days — or we keep working until it is, at no extra cost.',
+    valueStack: [
+      { item: 'Full AI Suite Installation (Claude Desktop + Dispatch)', value: '$500' },
+      { item: 'OpenClaw/NemoClaw Deployment', value: '$750' },
+      { item: 'Custom Projects & Skills Build', value: '$1,200' },
+      { item: 'Business Software Integrations', value: '$600' },
+      { item: '30-Day Optimization Period', value: '$1,500' },
+      { item: 'Employee Training (1–2 staff)', value: '$800' },
+      { item: 'Quick-Start Command Guide', value: '$197' },
+      { item: '60-Day Priority Support', value: '$500' },
     ],
     faqs: [
       {
@@ -336,6 +357,7 @@ export const services: Service[] = [
     icon: 'MapPin',
     startingPrice: 'From $500',
     targetAudience: 'business',
+    bookingOnly: true,
     benefits: [
       'Free GMB audit report — see exactly where you rank and what\'s costing you customers',
       'AI-optimized Google Business Profile (keywords, categories, services, photos)',
@@ -362,7 +384,7 @@ export const services: Service[] = [
       },
       {
         name: 'GMB Management',
-        price: '$350/mo',
+        price: 'Custom',
         description: 'Ongoing monthly management to keep you ranking and growing.',
         features: [
           'Everything in GMB Optimization',

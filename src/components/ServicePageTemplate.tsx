@@ -68,6 +68,39 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         </div>
       </section>
 
+      {/* What's Included */}
+      {service.whatsIncluded && service.whatsIncluded.length > 0 && (
+        <section className="section-padding bg-[#F8FAFC]">
+          <div className="container-wide">
+            <div className="text-center mb-10">
+              <p className="text-sm font-semibold text-[#06B6D4] uppercase tracking-wider mb-3">Deliverables</p>
+              <h2 className="text-3xl font-bold text-[#0F172A]">Your Complete AI Business Suite</h2>
+            </div>
+            <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {service.whatsIncluded.map((item) => (
+                <div key={item} className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4">
+                  <Check className="w-5 h-5 text-[#06B6D4] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-[#475569]">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Guarantee */}
+      {service.guarantee && (
+        <section className="section-padding bg-white">
+          <div className="container-wide">
+            <div className="max-w-2xl mx-auto bg-[#0F172A] rounded-2xl p-8 md:p-10 text-center">
+              <p className="text-[#06B6D4] text-sm font-semibold uppercase tracking-wider mb-3">Our Promise</p>
+              <h2 className="text-2xl font-bold text-white mb-4">We Stand Behind Our Work</h2>
+              <p className="text-slate-300 text-lg leading-relaxed">{service.guarantee}</p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Packages */}
       <section className="section-padding bg-[#F8FAFC]">
         <div className="container-wide">
@@ -78,6 +111,41 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
           <ServicePackageCards service={service} />
         </div>
       </section>
+
+      {/* Value Stack */}
+      {service.valueStack && service.valueStack.length > 0 && (
+        <section className="section-padding bg-white">
+          <div className="container-wide">
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-8">
+                <p className="text-sm font-semibold text-[#8B5CF6] uppercase tracking-wider mb-3">What You&apos;re Getting</p>
+                <h2 className="text-3xl font-bold text-[#0F172A]">Over $6,000 in Value</h2>
+              </div>
+              <div className="border border-slate-200 rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-2 bg-[#0F172A] px-6 py-3">
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">What You Get</p>
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider text-right">Value</p>
+                </div>
+                {service.valueStack.map((row, i) => (
+                  <div
+                    key={row.item}
+                    className={`grid grid-cols-2 px-6 py-4 ${i % 2 === 0 ? 'bg-white' : 'bg-[#F8FAFC]'}`}
+                  >
+                    <span className="text-sm text-[#475569]">{row.item}</span>
+                    <span className="text-sm font-semibold text-[#06B6D4] text-right">{row.value}</span>
+                  </div>
+                ))}
+                <div className="grid grid-cols-2 px-6 py-4 bg-[#0F172A]">
+                  <span className="text-sm font-bold text-white">Total Value</span>
+                  <span className="text-sm font-bold text-[#06B6D4] text-right">
+                    ${service.valueStack.reduce((sum, row) => sum + parseInt(row.value.replace(/[$,]/g, ''), 10), 0).toLocaleString()}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Membership CTA */}
       <section className="section-padding bg-white">
